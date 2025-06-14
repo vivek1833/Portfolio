@@ -4,73 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivek Yadav</title>
+    <title>Vivek Yadav - Software Developer</title>
     <link rel="icon" href="static/Images/vivek.png" type="image/x-icon">
     <meta name="description" content="Vivek Yadav's portfolio showcasing his skills and projects">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .navbar .nav-link.active,
+        .navbar .nav-link:focus {
+            font-weight: 600;
+            color: #0d6efd !important;
+            border-bottom: 2px solid #0d6efd;
+            background: none;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+        }
+
+        .social-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 40px 0 30px 0;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .navbar {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80" tabindex="0">
     <!-- Header Section -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">Vivek Yadav</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Vivek Yadav</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm <span class="highlight">Vivek Yadav</span></h1>
-                <p class="title">Software Developer</p>
-                <p class="description">Passionate about creating innovative solutions and building scalable applications
-                </p>
-                <div class="cta-buttons">
-                    <a href="static/Resume/Vivek_Yadav_Resume.pdf" class="btn primary" target="_blank">
-                        <i class="fas fa-download"></i>
-                        Download Resume
-                    </a>
-                    <a href="#projects" class="btn secondary">View Work</a>
+    <section id="home" class="section-padding min-vh-100 d-flex align-items-center bg-light">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 text-center">
+                    <img src="static/Images/vivek.png" alt="Vivek Yadav" class="rounded-circle shadow mb-4 mx-auto"
+                        style="width: 140px; height: 140px; object-fit: cover;">
+                    <h1 class="display-5 fw-bold mb-2">Hi, I'm <span class="text-primary">Vivek Yadav</span></h1>
+                    <div class="fs-5 text-secondary mb-2">Software Developer <span class="text-muted">|</span> Backend
+                        Specialist</div>
+                    <p class="mb-4 text-muted">Passionate about building scalable, reliable systems and delivering
+                        innovative solutions. Experienced in Java, Spring Boot, PostgreSQL, Node.js, and React. 1100+
+                        DSA problems solved. Clean code &amp; system design enthusiast.</p>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                        <a href="static/Resume/Vivek_Yadav_Resume.pdf" class="btn btn-primary px-4 py-2 fw-semibold"
+                            target="_blank">
+                            <i class="fas fa-download me-2"></i>Download Resume
+                        </a>
+                        <a href="#projects" class="btn btn-outline-primary px-4 py-2 fw-semibold">View Work</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="static/Images/vivek.png" alt="Vivek Yadav" class="profile-img">
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I'm Vivek Yadav, a backend-focused software engineer passionate about building scalable, reliable
-                    systems. I've worked on features like real-time notifications, role-based authorization, API
-                    optimization, and large dataset handling. My tech stack includes Java, Spring Boot, PostgreSQL,
-                    Node.js, and React. I've also built full-stack projects and solved over 1100+ DSA problems across
-                    platforms. I enjoy clean code, system design, and solving real-world engineering challenges.</p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <h3>Location</h3>
-                        <p>Rewari, Haryana, India</p>
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead text-center mb-5">I'm Vivek Yadav, a backend-focused software engineer passionate
+                        about building scalable, reliable systems. I've worked on features like real-time notifications,
+                        role-based authorization, API optimization, and large dataset handling. My tech stack includes
+                        Java, Spring Boot, PostgreSQL, Node.js, and React. I've also built full-stack projects and
+                        solved over 1200+ DSA problems across platforms. I enjoy clean code, system design, and solving
+                        real-world engineering challenges.</p>
+                    <div class="text-center">
+                        <h3 class="h4 mb-3">Location</h3>
+                        <p class="mb-0"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Rewari, Haryana, India
+                        </p>
                     </div>
                 </div>
             </div>
@@ -78,59 +147,43 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <h2 class="section-title">Professional Experience</h2>
-        <div class="experience-content">
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="experience-title">
-                        <h3>Computer Scientist</h3>
-                        <p class="company">Belzabar Software Design Pvt. Ltd.</p>
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Professional Experience</h2>
+            <div class="card shadow-sm mb-4 border-0">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-4">
+                        <div>
+                            <h3 class="h4 mb-2">Computer Scientist</h3>
+                            <p class="text-muted mb-0">Belzabar Software Design Pvt. Ltd.</p>
+                        </div>
+                        <div class="text-end">
+                            <p class="mb-1"><i class="far fa-calendar-alt me-2 text-primary"></i>Mar 2024 - Present</p>
+                            <p class="mb-0"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Remote</p>
+                        </div>
                     </div>
-                    <div class="experience-meta">
-                        <p class="duration"><i class="far fa-calendar-alt"></i> Mar 2024 - Present</p>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i>Remote</p>
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2 mb-2">Spring Boot</span>
+                        <span class="badge bg-primary me-2 mb-2">PostgreSQL</span>
+                        <span class="badge bg-primary me-2 mb-2">REST APIs</span>
+                        <span class="badge bg-primary me-2 mb-2">Java</span>
+                        <span class="badge bg-primary me-2 mb-2">Postman</span>
                     </div>
-                </div>
-                <div class="experience-body">
-                    <div class="tech-stack">
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">REST APIs</span>
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Postman</span>
-                    </div>
-                    <ul class="responsibilities">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span>
-                                Constructed in-app notification system using Spring Boot and PostgreSQL; delivered 500+
-                                real-time user notifications daily, ensuring 99% of users received critical updates
-                                within government software.
-                            </span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span>
-                                Enhanced form submission performance by approximately 70% (from 8-10s to 2-3s) through
-                                asynchronous processing, backend optimization, and query tuning.
-                            </span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span>
-                                Implemented efficient filtering and sorting for large datasets (10K-15K records) and
-                                managed smooth environment migrations across development, staging, and production.
-                            </span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span>
-                                Designed and implemented a robust role-based authorization and permissions system,
-                                ensuring secure and accurate access control for 2500+ users across 5+ user roles, with
-                                zero reported permission issues post-deployment.
-                            </span>
-                        </li>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Constructed in-app
+                            notification system using Spring Boot and PostgreSQL; delivered 500+ real-time user
+                            notifications daily, ensuring 99% of users received critical updates within government
+                            software.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Enhanced form submission
+                            performance by approximately 70% (from 8-10s to 2-3s) through asynchronous processing,
+                            backend optimization, and query tuning.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Implemented efficient
+                            filtering and sorting for large datasets (10K-15K records) and managed smooth environment
+                            migrations across development, staging, and production.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Designed and implemented a
+                            robust role-based authorization and permissions system, ensuring secure and accurate access
+                            control for 2500+ users across 5+ user roles, with zero reported permission issues
+                            post-deployment.</li>
                     </ul>
                 </div>
             </div>
@@ -138,52 +191,53 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education">
-        <h2 class="section-title">Education</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2020 - 2024</div>
-                <div class="timeline-content">
-                    <div class="education-header">
-                        <div class="education-title">
-                            <h3>Bachelor of Engineering in Computer Science and Engineering</h3>
-                            <p class="institution">Chandigarh University</p>
-                        </div>
-                        <div class="education-meta">
-                            <p class="percentage"><i class="fas fa-graduation-cap"></i> 8.5 CGPA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2019 - 2020</div>
-                <div class="timeline-content">
-                    <div class="education-header">
-                        <div class="education-title">
-                            <h3>XII (CBSE)</h3>
-                            <p class="institution">Kendriya Vidyalaya Guwahati</p>
-                        </div>
-                        <div class="education-meta">
-                            <p class="percentage"><i class="fas fa-graduation-cap"></i>91%</p>
+    <section id="education" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Education</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h3 class="h4 mb-2">Bachelor of Engineering in Computer Science and Engineering</h3>
+                                    <p class="text-muted mb-0">Chandigarh University</p>
+                                </div>
+                                <div class="text-end">
+                                    <p class="mb-1">2020 - 2024</p>
+                                    <p class="mb-0"><i class="fas fa-graduation-cap me-2 text-primary"></i>8.04 CGPA</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2017 - 2018</div>
-                <div class="timeline-content">
-                    <div class="education-header">
-                        <div class="education-title">
-                            <h3>X (CBSE)</h3>
-                            <p class="institution">Kendriya Vidyalaya Prayagraj</p>
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h3 class="h4 mb-2">XII (CBSE)</h3>
+                                    <p class="text-muted mb-0">Kendriya Vidyalaya Guwahati</p>
+                                </div>
+                                <div class="text-end">
+                                    <p class="mb-1">2019 - 2020</p>
+                                    <p class="mb-0"><i class="fas fa-graduation-cap me-2 text-primary"></i>91%</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="education-meta">
-                            <p class="percentage"><i class="fas fa-graduation-cap"></i>91%</p>
+                    </div>
+
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h3 class="h4 mb-2">X (CBSE)</h3>
+                                    <p class="text-muted mb-0">Kendriya Vidyalaya Prayagraj</p>
+                                </div>
+                                <div class="text-end">
+                                    <p class="mb-1">2017 - 2018</p>
+                                    <p class="mb-0"><i class="fas fa-graduation-cap me-2 text-primary"></i>91%</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -192,67 +246,81 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Coding Languages</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <i class="fas fa-code"></i>
-                        <span>C++</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-coffee"></i>
-                        <span>Java</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-terminal"></i>
-                        <span>Python</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Web Technologies</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <i class="fab fa-java"></i>
-                        <span>Spring</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-node"></i>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>React.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-node-js"></i>
-                        <span>Express.js</span>
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-4">Coding Languages</h3>
+                            <div class="d-flex flex-wrap gap-4">
+                                <div class="text-center">
+                                    <i class="fas fa-code fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">C++</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-coffee fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">Java</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-terminal fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">Python</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="skill-category">
-                <h3>Tools & Technologies</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <i class="fab fa-git-alt"></i>
-                        <span>Git</span>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-4">Web Technologies</h3>
+                            <div class="d-flex flex-wrap gap-4">
+                                <div class="text-center">
+                                    <i class="fab fa-java fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">Spring</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fab fa-node fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">Node.js</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fab fa-react fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">React.js</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fab fa-node-js fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">Express.js</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="fas fa-code-fork"></i>
-                        <span>Postman</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-laptop-code"></i>
-                        <span>VS Code</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <span>PgAdmin</span>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-4">Tools & Technologies</h3>
+                            <div class="d-flex flex-wrap gap-4">
+                                <div class="text-center">
+                                    <i class="fab fa-git-alt fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">Git</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-code-fork fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">Postman</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-laptop-code fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">VS Code</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-database fa-2x mb-2 text-primary"></i>
+                                    <p class="mb-0">PgAdmin</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,86 +328,97 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="static/Images/pulsePoint.png" alt="PulsePoint - Hospital Management System"
-                        loading="lazy">
-                    <a href="https://github.com/vivek1833/PulsePoint" class="project-github" target="_blank"
-                        aria-label="View on GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <div class="project-content">
-                    <div class="project-title">PulsePoint – Hospital Management System</div>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">REST APIs</span>
-                        <span class="tech-tag">Bcrypt</span>
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Featured Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="static/Images/pulsePoint.png" class="card-img-top"
+                            alt="PulsePoint - Hospital Management System">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 class="h5 mb-0">PulsePoint – Hospital Management System</h3>
+                                <a href="https://github.com/vivek1833/PulsePoint" class="btn btn-sm btn-outline-dark"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2 mb-2">Spring Boot</span>
+                                <span class="badge bg-primary me-2 mb-2">React.js</span>
+                                <span class="badge bg-primary me-2 mb-2">PostgreSQL</span>
+                                <span class="badge bg-primary me-2 mb-2">JWT</span>
+                                <span class="badge bg-primary me-2 mb-2">REST APIs</span>
+                                <span class="badge bg-primary me-2 mb-2">Bcrypt</span>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>User Authentication and
+                                    email generation</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Password hashing and JWT
+                                    token generation</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>CRUD operations on
+                                    patients</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sorting and Pagination
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-features">
-                        <ul>
-                            <li>User Authentication and email generation</li>
-                            <li>Password hashing and JWT token generation</li>
-                            <li>CRUD operations on patients</li>
-                            <li>Sorting and Pagination</li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="static/Images/photogram.png" alt="Photogram - Social Media Platform" loading="lazy">
-                    <a href="https://github.com/vivek1833/Social-media" class="project-github" target="_blank"
-                        aria-label="View on GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <div class="project-content">
-                    <div class="project-title">Photogram – Social Media Platform</div>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">Cloudinary</span>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="static/Images/photogram.png" class="card-img-top"
+                            alt="Photogram - Social Media Platform">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 class="h5 mb-0">Photogram – Social Media Platform</h3>
+                                <a href="https://github.com/vivek1833/Social-media" class="btn btn-sm btn-outline-dark"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2 mb-2">Node.js</span>
+                                <span class="badge bg-primary me-2 mb-2">React.js</span>
+                                <span class="badge bg-primary me-2 mb-2">MongoDB</span>
+                                <span class="badge bg-primary me-2 mb-2">Express.js</span>
+                                <span class="badge bg-primary me-2 mb-2">Cloudinary</span>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Post creation, likes,
+                                    comments, follow</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Secure authentication
+                                    with JWT and Bcrypt.js</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-features">
-                        <ul>
-                            <li>Post creation, likes, comments, follow</li>
-                            <li>Secure authentication with JWT and Bcrypt.js</li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="static/Images/chatBook.png" alt="ChatBook - Chat Application" loading="lazy">
-                    <a href="https://github.com/vivek1833/ChatBook" class="project-github" target="_blank"
-                        aria-label="View on GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <div class="project-content">
-                    <div class="project-title">ChatBook - Chat Application</div>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">Bootstrap</span>
-                    </div>
-                    <div class="project-features">
-                        <ul>
-                            <li>Google Authentication</li>
-                            <li>Real-time chat with multiple users</li>
-                            <li>Search users</li>
-                        </ul>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="static/Images/chatBook.png" class="card-img-top" alt="ChatBook - Chat Application">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 class="h5 mb-0">ChatBook - Chat Application</h3>
+                                <a href="https://github.com/vivek1833/ChatBook" class="btn btn-sm btn-outline-dark"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2 mb-2">Firebase</span>
+                                <span class="badge bg-primary me-2 mb-2">React.js</span>
+                                <span class="badge bg-primary me-2 mb-2">Bootstrap</span>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Google Authentication
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Real-time chat with
+                                    multiple users</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Search users</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -347,105 +426,128 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <h2 class="section-title">Achievements</h2>
-        <div class="achievements-grid">
-            <div class="achievement-card">
-                <div class="achievement-icon">
-                    <i class="fas fa-trophy"></i>
+    <section id="achievements" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Achievements</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4 text-center">
+                            <i class="fas fa-trophy fa-3x text-warning mb-3"></i>
+                            <h3 class="h5 mb-3">Kargil Batch Selection</h3>
+                            <p class="card-text mb-0">Selected for the prestigious "Kargil Batch" at Chandigarh
+                                University — ranked among the top 150 out of 5,000+ students based on coding and
+                                analytical performance.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="achievement-content">
-                    <h3>Kargil Batch Selection</h3>
-                    <p>Selected for the prestigious "Kargil Batch" at Chandigarh University — ranked among the top 150
-                        out of 5,000+ students based on coding and analytical performance.</p>
-                </div>
-            </div>
 
-            <div class="achievement-card">
-                <div class="achievement-icon">
-                    <i class="fas fa-code"></i>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4 text-center">
+                            <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                            <h3 class="h5 mb-3">Competitive Programming</h3>
+                            <p class="card-text mb-0">Solved 1100+ problems across platforms such as LeetCode, CodeChef,
+                                and HackerRank; awarded 5-star coder status on HackerRank.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="achievement-content">
-                    <h3>Competitive Programming</h3>
-                    <p>Solved 1100+ problems across platforms such as LeetCode, CodeChef, and HackerRank; awarded 5-star
-                        coder status on HackerRank.</p>
-                </div>
-            </div>
 
-            <div class="achievement-card">
-                <div class="achievement-icon">
-                    <i class="fas fa-medal"></i>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4 text-center">
+                            <i class="fas fa-medal fa-3x text-success mb-3"></i>
+                            <h3 class="h5 mb-3">CodeChef Achievement</h3>
+                            <p class="card-text mb-0">Secured Global Rank 340 in CodeChef Starters 99</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="achievement-content">
-                    <h3>CodeChef Achievement</h3>
-                    <p>Secured Global Rank 340 in CodeChef Starters 99</p>
-                </div>
-            </div>
 
-            <div class="achievement-card">
-                <div class="achievement-icon">
-                    <i class="fas fa-award"></i>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4 text-center">
+                            <i class="fas fa-award fa-3x text-danger mb-3"></i>
+                            <h3 class="h5 mb-3">TechGig Code Gladiators</h3>
+                            <p class="card-text mb-0">Finalist in TechGig Code Gladiators Hackathon 2022, selected from
+                                thousands of participants nationwide.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="achievement-content">
-                    <h3>TechGig Code Gladiators</h3>
-                    <p>Finalist in TechGig Code Gladiators Hackathon 2022, selected from thousands of participants
-                        nationwide.</p>
-                </div>
-            </div>
 
-            <div class="achievement-card">
-                <div class="achievement-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="achievement-content">
-                    <h3>JEE-Mains Excellence</h3>
-                    <p>Achieved 91 percentile in JEE-Mains 2020, ranking among the top 10% of over 1 million test-takers
-                        nationally.</p>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4 text-center">
+                            <i class="fas fa-graduation-cap fa-3x text-info mb-3"></i>
+                            <h3 class="h5 mb-3">JEE-Mains Excellence</h3>
+                            <p class="card-text mb-0">Achieved 91 percentile in JEE-Mains 2020, ranking among the top
+                                10% of over 1 million test-takers nationally.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:vivekyadav138001@gmail.com" target="_blank">vivekyadav138001@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Rewari, Haryana, India</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://linkedin.com/in/vivekyadav9506115091" target="_blank">LinkedIn</a>
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row mb-5">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <i class="fas fa-envelope fa-2x mb-3 text-primary"></i>
+                            <a href="mailto:vivekyadav138001@gmail.com"
+                                class="text-decoration-none d-block">vivekyadav138001@gmail.com</a>
+                        </div>
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <i class="fas fa-map-marker-alt fa-2x mb-3 text-primary"></i>
+                            <p class="mb-0">Rewari, Haryana, India</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fab fa-linkedin fa-2x mb-3 text-primary"></i>
+                            <a href="https://linkedin.com/in/vivekyadav9506115091" class="text-decoration-none d-block"
+                                target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                    <form class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg" placeholder="Your Name"
+                                    id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-lg" placeholder="Your Email"
+                                    id="email" required>
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control form-control-lg" placeholder="Your Message" id="message"
+                                    rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100"
+                                onclick="sendEmail(name, message)">Send Message</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" id="name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Your Message" id="message" required></textarea>
-                </div>
-                <button type="submit" class="btn primary" onclick="sendEmail(name, message)">Send Message</button>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://github.com/vivek1833" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/vivekyadav9506115091" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <footer class="bg-dark text-light py-5">
+        <div class="container text-center">
+            <div class="mb-4">
+                <a href="https://github.com/vivek1833" class="text-light me-4 social-icon" target="_blank"><i
+                        class="fab fa-github fa-2x"></i></a>
+                <a href="https://linkedin.com/in/vivekyadav9506115091" class="text-light social-icon me-4" target="_blank"><i
+                        class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://leetcode.com/u/vivek1833/" class="text-light social-icon me-4" target="_blank"><i
+                        class="fa-solid fa-code fa-2x"></i></a>
+                <a href="https://www.geeksforgeeks.org/user/vivek1833/" class="text-light social-icon"
+                    target="_blank"><i class="fa-solid fa-laptop-code fa-2x"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2024 Vivek Yadav. All rights reserved.</p>
         </div>
-        <p>&copy; 2024 Vivek Yadav. All rights reserved.</p>
     </footer>
 
     <script src="js/main.js"></script>
